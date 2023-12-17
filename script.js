@@ -14,9 +14,12 @@ const btnCikarDOM=document.getElementById("cikar");
 
 const btnBolDOM=document.getElementById("bol");
 
+const btnCarpDOM=document.getElementById("carp");
+
 btnToplaDOM.addEventListener("click",topla);
 btnCikarDOM.addEventListener("click",cikar);
 btnBolDOM.addEventListener("click",bol);
+btnCarpDOM.addEventListener("click",carp);
 
 
 // Toplama
@@ -52,6 +55,7 @@ function cikar()
 	sifirla();
 }
 
+//Bolme
 function bol()
 {
 	if(sayi1DOM.value=="" || sayi2DOM.value=="")
@@ -63,6 +67,23 @@ function bol()
 		sayi1Value=parseInt(sayi1DOM.value);
 		sayi2Value=parseInt(sayi2DOM.value);
 		sonuc=sayi1Value/sayi2Value;
+		sonucDOM.value=sonuc;
+	}	
+	sifirla();
+}
+
+//Carpma
+function carp()
+{
+	if(sayi1DOM.value=="" || sayi2DOM.value=="")
+	{
+		alert("Bos alan bırakmayınız")
+	}
+	else
+	{
+		sayi1Value=parseInt(sayi1DOM.value);
+		sayi2Value=parseInt(sayi2DOM.value);
+		sonuc=sayi1Value*sayi2Value;
 		sonucDOM.value=sonuc;
 	}	
 	sifirla();
