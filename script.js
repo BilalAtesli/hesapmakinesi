@@ -12,8 +12,11 @@ const btnToplaDOM=document.getElementById("topla");
 
 const btnCikarDOM=document.getElementById("cikar");
 
+const btnBolDOM=document.getElementById("bol");
+
 btnToplaDOM.addEventListener("click",topla);
 btnCikarDOM.addEventListener("click",cikar);
+btnBolDOM.addEventListener("click",bol);
 
 
 // Toplama
@@ -48,6 +51,23 @@ function cikar()
 	}	
 	sifirla();
 }
+
+function bol()
+{
+	if(sayi1DOM.value=="" || sayi2DOM.value=="")
+	{
+		alert("Bos alan bırakmayınız")
+	}
+	else
+	{
+		sayi1Value=parseInt(sayi1DOM.value);
+		sayi2Value=parseInt(sayi2DOM.value);
+		sonuc=sayi1Value/sayi2Value;
+		sonucDOM.value=sonuc;
+	}	
+	sifirla();
+}
+
 function sifirla()
 {
 	sayi1Value="";
