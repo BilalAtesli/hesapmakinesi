@@ -3,9 +3,63 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Hesap Makinesi</title>
   </head>
   <body>
-    
+    <div class="container border mt-5">
+      <div class="row">
+        <h1 class="text-center mb-3 bg-dark text-white py-3">Hesap Makinesi</h1>
+      </div>
+      <div class="row">
+
+        <!-- Birinci Sayi -->
+        <div class="input-group mb-3">
+          <span class="input-group-text bg-danger text-white" id="inputGroup-sizing-default">Birinci Sayı</span>
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <!-- Birinci Sayi END -->
+
+        <!-- İkinci Sayi -->
+        <div class="input-group mb-3">
+          <span class="input-group-text bg-warning text-white" id="inputGroup-sizing-default">İkinci Sayı</span>
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <!-- İkinci Sayi END -->
+        
+        <!-- Sonuc  -->
+        <div class="input-group mb-3">
+          <span class="input-group-text bg-success text-white" id="inputGroup-sizing-default">Sonuç</span>
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <!-- Sonuc END -->
+
+      </div>
+      <div class="row mb-3   mx-2">
+        <!-- Topla -->
+        <div class="col-sm-3">
+          <button type="button" class="btn btn-dark">Toplama</button>
+        </div>
+        <!-- Topla END -->
+
+        <!-- Çıkar -->
+        <div class="col-sm-3">
+          <button type="button" class="btn btn-dark">Çıkarma</button>
+        </div>
+        <!-- Çıkar END -->
+
+        <!-- Böl -->
+        <div class="col-sm-3">
+          <button type="button" class="btn btn-dark">Bölme</button>
+        </div>
+        <!-- Böl END -->
+
+         <!-- Çarp -->
+        <div class="col-sm-3">
+          <button type="button" class="btn btn-dark">Çarpma</button>
+        </div>
+        <!-- Çarp END -->
+      </div>
+    </div>
   </body>
 </html>
