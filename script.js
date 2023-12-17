@@ -10,7 +10,11 @@ const sonucDOM=document.getElementById("sonuc");
 
 const btnToplaDOM=document.getElementById("topla");
 
+const btnCikarDOM=document.getElementById("cikar");
+
 btnToplaDOM.addEventListener("click",topla);
+btnCikarDOM.addEventListener("click",cikar);
+
 
 // Toplama
 function topla()
@@ -24,6 +28,22 @@ function topla()
 		sayi1Value=parseInt(sayi1DOM.value);
 		sayi2Value=parseInt(sayi2DOM.value);
 		sonuc=sayi1Value+sayi2Value;
+		sonucDOM.value=sonuc;
+	}	
+	sifirla();
+}
+// Çıkarma
+function cikar()
+{
+	if(sayi1DOM.value=="" || sayi2DOM.value=="")
+	{
+		alert("Bos alan bırakmayınız")
+	}
+	else
+	{
+		sayi1Value=parseInt(sayi1DOM.value);
+		sayi2Value=parseInt(sayi2DOM.value);
+		sonuc=sayi1Value-sayi2Value;
 		sonucDOM.value=sonuc;
 	}	
 	sifirla();
