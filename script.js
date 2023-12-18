@@ -1,25 +1,30 @@
-let sayi1Value;
-let sayi2Value;
-let sonuc;
-
+// İnputlar
 const sayi1DOM=document.getElementById("sayi-1");
 
 const sayi2DOM=document.getElementById("sayi-2");
 
 const sonucDOM=document.getElementById("sonuc");
+// İnputlar END
 
-const btnToplaDOM=document.getElementById("topla");
+//Eventler
+document.getElementById("topla").addEventListener("click",function()
+{
+	hesapla("topla");
+})
 
-const btnCikarDOM=document.getElementById("cikar");
-
-const btnBolDOM=document.getElementById("bol");
-
-const btnCarpDOM=document.getElementById("carp");
-
-btnToplaDOM.addEventListener("click",topla);
-btnCikarDOM.addEventListener("click",cikar);
-btnBolDOM.addEventListener("click",bol);
-btnCarpDOM.addEventListener("click",carp);
+document.getElementById("cikar").addEventListener("click",function()
+{
+	hesapla("cikar");
+})
+document.getElementById("bol").addEventListener("click",function()
+{
+	hesapla("bol");
+})
+document.getElementById("carp").addEventListener("click",function()
+{
+	hesapla("carp");
+})
+//Eventler END
 
 
 // Toplama
