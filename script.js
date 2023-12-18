@@ -62,8 +62,6 @@ function hesapla(islem)
 			
 			break;
 			
-			default:
-				break;
 			}
 		}
 		sonucDOM.value=sonuc;
