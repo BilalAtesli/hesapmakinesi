@@ -26,81 +26,51 @@ document.getElementById("carp").addEventListener("click",function()
 })
 //Eventler END
 
-
-// Toplama
-function topla()
+//Gelen İsleme Göre Hesaplama
+function hesapla(islem)
 {
-	if(sayi1DOM.value=="" || sayi2DOM.value=="")
+	const sayi1Value=parseInt(sayi1DOM.value);
+	const sayi2Value=parseInt(sayi2DOM.value);
+	let sonuc=0;
+
+	//İnput Alanlarını Kontrol Blokları
+	if(isNaN(sayi1Value) || isNaN(sayi2Value))
 	{
-		alert("Bos alan bırakmayınız")
+		alert("Boş alan Bırakmayınız.")
 	}
+	
 	else
 	{
-		sayi1Value=parseInt(sayi1DOM.value);
-		sayi2Value=parseInt(sayi2DOM.value);
-		sonuc=sayi1Value+sayi2Value;
+	switch (islem) {
+		case "topla":
+			sonuc=sayi1Value+sayi2Value;
+			
+			break;
+			
+		case "cikar":
+			sonuc=sayi1Value-sayi2Value;
+				
+			break;
+				
+		case "bol":
+			sonuc=sayi1Value/sayi2Value;
+					
+			break;
+					
+		case "carp":
+			sonuc=sayi1Value*sayi2Value;
+			
+			break;
+			
+			default:
+				break;
+			}
+		}
 		sonucDOM.value=sonuc;
-	}	
-	sifirla();
-}
-// Çıkarma
-function cikar()
-{
-	if(sayi1DOM.value=="" || sayi2DOM.value=="")
-	{
-		alert("Bos alan bırakmayınız")
+	    sifirla();
 	}
-	else
-	{
-		sayi1Value=parseInt(sayi1DOM.value);
-		sayi2Value=parseInt(sayi2DOM.value);
-		sonuc=sayi1Value-sayi2Value;
-		sonucDOM.value=sonuc;
-	}	
-	sifirla();
-}
+	//Gelen İsleme Göre Hesaplama END
 
-//Bolme
-function bol()
-{
-	if(sayi1DOM.value=="" || sayi2DOM.value=="")
-	{
-		alert("Bos alan bırakmayınız")
-	}
-	else
-	{
-		sayi1Value=parseInt(sayi1DOM.value);
-		sayi2Value=parseInt(sayi2DOM.value);
-		sonuc=sayi1Value/sayi2Value;
-		sonucDOM.value=sonuc;
-	}	
-	sifirla();
-}
-
-//Carpma
-function carp()
-{
-	if(sayi1DOM.value=="" || sayi2DOM.value=="")
-	{
-		alert("Bos alan bırakmayınız")
-	}
-	else
-	{
-		sayi1Value=parseInt(sayi1DOM.value);
-		sayi2Value=parseInt(sayi2DOM.value);
-		sonuc=sayi1Value*sayi2Value;
-		sonucDOM.value=sonuc;
-	}	
-	sifirla();
-}
-
-function sifirla()
-{
-	sayi1Value="";
-	sayi2Value="";
-	sayi1DOM.value="";
-	sayi2DOM.value="";
-}
 
 
 
