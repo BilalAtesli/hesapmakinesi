@@ -71,6 +71,14 @@ function hesapla(islem)
 	}
 	//Gelen İsleme Göre Hesaplama END
 
+	// İnput alanlarını Sıfırla 
+	function sifirla()
+	{
+		sayi1DOM.value="";
+		sayi2DOM.value="";
+	
+    }
+   // İnput alanlarını Sıfırla END
 
 
 
